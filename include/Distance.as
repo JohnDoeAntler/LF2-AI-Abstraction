@@ -8,6 +8,8 @@ class Distance {
 
 	private bool result = true;
 
+	private double weight;
+
 	Distance (
 		Position@ pivot,
 		Position@ target
@@ -16,11 +18,16 @@ class Distance {
 		@this.target = target;
 	}
 
-	double getX () { return abs(pivot.getX() - target.getX()); }
+	double getX () { return abs(pivot.getPx(weight) - target.getPx(weight)); }
 
-	double getY () { return abs(pivot.getY() - target.getY()); }
+	double getY () { return abs(pivot.getPy(weight) - target.getPy(weight)); }
 
-	double getZ () { return abs(pivot.getZ() - target.getZ()); }
+	double getZ () { return abs(pivot.getPz(weight) - target.getPz(weight)); }
+
+	Distance@ predict(double weight) {
+		this.weight = weight;
+		return @this;
+	}
 
 	// method chaining
 	// range condition

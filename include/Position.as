@@ -75,18 +75,6 @@ class Position {
 		return this.z + this.vz * weight;
 	}
 
-	double getPx() {
-		return this.getPx(PREDICT_WEIGHT);
-	}
-
-	double getPy() {
-		return this.getPy(PREDICT_WEIGHT);
-	}
-
-	double getPz() {
-		return this.getPz(PREDICT_WEIGHT);
-	}
-
 	// direction
 	bool isLeftOf (Position@ pos) {
 		return this.x < pos.x;
