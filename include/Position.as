@@ -16,7 +16,7 @@ class Position {
 		this.z = z;
 	}
 
-	void dependencyInjection (const Info& info) {
+	protected void dependencyInjection (const Info& info) {
 		this.x = info.x;
 		this.y = info.y;
 		this.z = info.z;

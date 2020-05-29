@@ -4,7 +4,7 @@ class Attack : Entity {
 
 	private int team;
 
-	void dependencyInjection (const Info& info) {
+	private void dependencyInjection (const Info& info) {
 		this.team = target.team;
 	}
 
