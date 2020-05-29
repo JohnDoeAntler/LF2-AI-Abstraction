@@ -62,15 +62,15 @@ class Position {
 		return this.vz;
 	}
 
-	double getPx(int weight) {
+	double getPx(double weight) {
 		return this.x + this.vx * weight;
 	}
 
-	double getPy(int weight) {
+	double getPy(double weight) {
 		return this.y + this.vy * weight;
 	}
 
-	double getPz(int weight) {
+	double getPz(double weight) {
 		return this.z + this.vz * weight;
 	}
 
