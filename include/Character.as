@@ -10,7 +10,7 @@ class Character : Entity {
 	private int weapon_type;
 	private int ctimer;
 
-	void dependencyInjection (const Info& info) {
+	private void dependencyInjection (const Info& info) {
 		this.hp = info.hp;
 		this.mp = info.mp;
 		this.blink = info.blink;

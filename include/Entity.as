@@ -15,7 +15,7 @@ class Entity : Position {
 	protected int state;
 	protected int type;
 
-	void dependencyInjection (const Info& info) {
+	protected void dependencyInjection (const Info& info) {
 		this.id = info.id;
 		this.num = info.num;
 		this.facing = info.facing;
