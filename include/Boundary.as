@@ -17,13 +17,13 @@ class Boundary {
 	}
 
 	// get distance from pivot to nearest boundary (x-axis)
-	double getX () {
+	int getX () {
 		int width = getBoundaryWidth();
 		return 2 * this.pivot.getX() > width ? width - this.pivot.getX() : this.pivot.getX();
 	}
 
 	// get distance from pivot to nearest boundary (z-axis)
-	double getZ () {
+	int getZ () {
 		if (this.pivot.getZ() > ((bg_zwidth1 + bg_zwidth2) / 2)) {
 			return bg_zwidth2 - this.pivot.getZ();
 		} else {
