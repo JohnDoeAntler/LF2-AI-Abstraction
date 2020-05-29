@@ -7,9 +7,6 @@ class Entity : Position {
 	protected int id;
 	protected int num;
 	protected bool facing;
-	protected double vx;
-	protected double vy;
-	protected double vz;
 	protected int wait_counter;
 	protected int frame;
 	protected int state;
@@ -56,18 +53,6 @@ class Entity : Position {
 
 	bool isFacing() {
 		return this.facing;
-	}
-
-	double getVx() {
-		return this.vx;
-	}
-
-	double getVy() {
-		return this.vy;
-	}
-
-	double getVz() {
-		return this.vz;
 	}
 
 	int getWaitCounter() {
