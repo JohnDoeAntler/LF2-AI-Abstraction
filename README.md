@@ -19,16 +19,16 @@ First, you have to clone the project into local machine.
 git clone https://github.com/JohnDoeAntler/LF2-AI-Abstraction.git
 ```
 
-Or you could just download the repository by clicking on the top right "Clone" button to download the entire template.
+Or you could just download the repository by clicking on the top right "clone" button to [download](https://github.com/JohnDoeAntler/LF2-AI-Abstraction/archive/master.zip) the entire template.
 
 ## Installing the custom ddraw.dll
 
 As LF2 AngelScript Engine 2.2 doesn't support array sorting and LF2 AngelScript Engine 2.3.1 has the wrong offset of the catch timer.
-Therefore, I self-compiled a custom ddraw.dll with supporting array sorting and correct ctimer offset. The download link is available in the release page.
+Therefore, I self-compiled a custom ddraw.dll with supporting array sorting and correct ctimer offset. The download link is available in the [release page](https://github.com/JohnDoeAntler/LF2-AI-Abstraction/releases/tag/1.0.0).
 
 # Examples
 
-Please check out the repository wiki page.
+Please check out the repository [wiki page](https://github.com/JohnDoeAntler/LF2-AI-Abstraction/wiki).
 
 # Todo-List
 
@@ -41,8 +41,8 @@ Please check out the repository wiki page.
 
 # References
 
-* Nucleargod (OOP structure.)
+* Nucleargod - [OOP Structure](https://www.lf-empire.de/forum/showthread.php?tid=10502)
 
 # Author
 
-* John Doe Antler
+* [John Doe Antler](https://github.com/JohnDoeAntler)
