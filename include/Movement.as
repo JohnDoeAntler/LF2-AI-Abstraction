@@ -201,7 +201,14 @@ class Movement {
 	// catch object
 	void goto (Position@ obj) {
 		this.surround(obj, 30, 0, 25, 0);
-		this.dash();
+		if (me
+			.distanceTo(obj)
+			.outX(80)
+			.outZ(25)
+			.toBoolean()
+		) {
+			this.dash();
+		}
 	}
 
 }
