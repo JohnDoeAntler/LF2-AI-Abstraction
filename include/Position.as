@@ -1,10 +1,14 @@
 #include "Distance.as"
+#include "Config.as"
 
 class Position {
 
 	protected int x;
 	protected int y;
 	protected int z;
+	protected double vx;
+	protected double vy;
+	protected double vz;
 
 	Position (
 		int x,
@@ -45,6 +49,42 @@ class Position {
 
 	int getZ() {
 		return this.z;
+	}
+
+	double getVx() {
+		return this.vx;
+	}
+
+	double getVy() {
+		return this.vy;
+	}
+
+	double getVz() {
+		return this.vz;
+	}
+
+	double getPx(int weight) {
+		return this.x + this.vx * weight;
+	}
+
+	double getPy(int weight) {
+		return this.y + this.vy * weight;
+	}
+
+	double getPz(int weight) {
+		return this.z + this.vz * weight;
+	}
+
+	double getPx() {
+		return this.getPx(PREDICT_WEIGHT);
+	}
+
+	double getPy() {
+		return this.getPy(PREDICT_WEIGHT);
+	}
+
+	double getPz() {
+		return this.getPz(PREDICT_WEIGHT);
 	}
 
 	// direction
