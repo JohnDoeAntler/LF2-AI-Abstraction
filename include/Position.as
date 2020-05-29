@@ -91,6 +91,16 @@ class Position {
 		return this.z > pos.z;
 	}
 
+	// By Fonix
+	bool isApproaching (Position@ pos) {
+		return this.getVx() == 0 ? false : pos.isLeftOf(@this) == this.getVx() < 0;
+	}
+
+	// By Fonix
+	bool isLeaving (Position@ pos) {
+		return this.getVx() == 0 ? false : pos.isLeftOf(@this) == this.getVx() > 0;
+	}
+
 	// distance
 	Distance@ distanceTo (Position@ pos) {
 		return Distance(@this, pos);
