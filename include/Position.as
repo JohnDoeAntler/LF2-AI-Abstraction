@@ -1,5 +1,4 @@
 #include "Distance.as"
-#include "Config.as"
 
 class Position {
 
