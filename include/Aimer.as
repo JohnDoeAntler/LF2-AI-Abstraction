@@ -23,7 +23,7 @@ class Aimer {
 				} else {
 					up(1, 1);
 				}
-			} 
+			}
 		}
 	}
 
