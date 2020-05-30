@@ -211,4 +211,36 @@ class Movement {
 		}
 	}
 
+	// z approach
+	void approach (Position@ obj, int buffer) {
+		if (
+			obj
+				.distanceTo(me)
+				.outZ(buffer)
+				.toBoolean()
+		) {
+			if (obj.isTopOf(me)) {
+				up();
+			} else {
+				down();
+			}
+		}
+	}
+
+	// z leave
+	void leave (Position@ obj, int buffer) {
+		if (
+			obj
+				.distanceTo(me)
+				.outZ(buffer)
+				.toBoolean()
+		) {
+			if (obj.isBottomOf(me)) {
+				up();
+			} else {
+				down();
+			}
+		}
+	}
+
 }
