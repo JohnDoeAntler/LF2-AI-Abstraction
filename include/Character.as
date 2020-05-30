@@ -77,11 +77,11 @@ class Character : Entity {
 	bool isBrokenDefend()		{return this.getState() == 8;}
 	bool isCatching()			{return this.getState() == 9;}
 	bool isCaughting()			{return this.getState() == 10;}
-	bool isInjuring()			{return this.getState() == 11 || this.isCatchable();}
+	bool isInjuring()			{return this.getState() == 11 || this.isStunned();}
 	bool isFalling()			{return this.getState() == 12;}
 	bool isFrozen()				{return this.getState() == 13;}
 	bool isLying()				{return this.getState() == 14;}
-	bool isCatchable()			{return this.getState() == 16;}
+	bool isStunned()			{return this.getState() == 16;}
 	bool isDrinking()			{return this.getState() == 17;}
 	bool isOnFire()				{return this.getState() == 18;}
 	bool isSkilling()			{return this.getFrame() > 234;}
