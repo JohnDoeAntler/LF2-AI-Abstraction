@@ -40,7 +40,7 @@ class Attack : Entity {
 	}
 	
 	bool isChasing(){
-		if(isFlying()){
+		if(isAttacking()){
 			if(this.getId() == 215) return true;						//Dennis
 			else if(this.getId() == 214) return true;					//John
 			else if(this.getId() == 219 || this.getId() == 220) return true;	//Jan
@@ -54,7 +54,7 @@ class Attack : Entity {
 	
 	bool isCure(){
 		if(this.getId() == 200 && this.getFrame() >= 50 && this.getFrame() < 55) return true;	//John
-		else if(this.getId() == 220 && isFlying()) return true;			//Jan
+		else if(this.getId() == 220 && isAttacking()) return true;			//Jan
 		else return false;
 	}
 	
