@@ -1,6 +1,7 @@
 #include "Distance.as"
+#include "Stringifiable.as";
 
-class Position {
+class Position : IStringifiable {
 
 	protected int x;
 	protected int y;

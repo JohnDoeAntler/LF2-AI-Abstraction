@@ -1,4 +1,5 @@
 #include "Entity.as";
+#include "Stringifiable.as";
 
 Range@ itrToRange (Entity@ entity, const Frame@ frame) {
 	return Range(
@@ -30,7 +31,7 @@ int max (int a, int b) {
 	return a > b ? a : b;
 }
 
-class Range {
+class Range : IStringifiable {
 
 	//    x1, y1, z1 +--------+ x2, y1, z1
 	//              /|       /|

@@ -1,6 +1,7 @@
 #include "Position.as";
+#include "Stringifiable.as";
 
-class Distance {
+class Distance : IStringifiable {
 	
 	private Position@ pivot = null;
 
