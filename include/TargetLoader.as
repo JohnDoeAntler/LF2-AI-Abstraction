@@ -1,6 +1,3 @@
-#include "Character.as";
-#include "Attack.as";
-#include "Item.as";
 #include "Entity.as";
 #include "Distance.as";
 #include "Utils.as";
@@ -73,8 +70,8 @@ class TargetLoader {
 
 		// sort characters
 		arr[0].sort(function (a, b) {
-			Character@ tmpA = Character(a);
-			Character@ tmpB = Character(b);
+			Entity@ tmpA = Entity(a);
+			Entity@ tmpB = Entity(b);
 			return tmpA.isLying() 
 				? tmpB.isLying() 
 					? distanceComparator(tmpA, tmpB) 
@@ -102,34 +99,34 @@ class TargetLoader {
 	bool hasTeammate () 	{ return arr[8].length() > 0; }
 	bool hasItem () 		{ return arr[9].length() > 0; }
 
-	array<Item@> getLightWeapons () {
-		array<Item@> arr;
+	array<Entity@> getLightWeapons () {
+		array<Entity@> arr;
  		for (uint i = 0; i < this.arr[1].length(); i++) {
-			arr.insertLast(Item(this.arr[1][i]));
+			arr.insertLast(Entity(this.arr[1][i]));
 		}
 		return arr;
 	}
 	
-	array<Item@> getHeavyWeapons () {
-		array<Item@> arr;
+	array<Entity@> getHeavyWeapons () {
+		array<Entity@> arr;
  		for (uint i = 0; i < this.arr[2].length(); i++) {
-			arr.insertLast(Item(this.arr[2][i]));
+			arr.insertLast(Entity(this.arr[2][i]));
 		}
 		return arr;
 	}
 	
-	array<Attack@> getAttacks () {
-		array<Attack@> arr;
+	array<Entity@> getAttacks () {
+		array<Entity@> arr;
  		for (uint i = 0; i < this.arr[3].length(); i++) {
-			arr.insertLast(Attack(this.arr[3][i]));
+			arr.insertLast(Entity(this.arr[3][i]));
 		}
 		return arr;
 	}
 	
-	array<Item@> getThrowWeapons () {
-		array<Item@> arr;
+	array<Entity@> getThrowWeapons () {
+		array<Entity@> arr;
  		for (uint i = 0; i < this.arr[4].length(); i++) {
-			arr.insertLast(Item(this.arr[4][i]));
+			arr.insertLast(Entity(this.arr[4][i]));
 		}
 		return arr;
 	}
@@ -142,59 +139,59 @@ class TargetLoader {
 		return arr;
 	}
 	
-	array<Item@> getDrinks () {
-		array<Item@> arr;
+	array<Entity@> getDrinks () {
+		array<Entity@> arr;
  		for (uint i = 0; i < this.arr[6].length(); i++) {
-			arr.insertLast(Item(this.arr[6][i]));
+			arr.insertLast(Entity(this.arr[6][i]));
 		}
 		return arr;
 	}
 	
-	array<Character@> getEnemies () {
-		array<Character@> arr;
+	array<Entity@> getEnemies () {
+		array<Entity@> arr;
  		for (uint i = 0; i < this.arr[7].length(); i++) {
-			arr.insertLast(Character(this.arr[7][i]));
+			arr.insertLast(Entity(this.arr[7][i]));
 		}
 		return arr;
 	}
 	
-	array<Character@> getTeammates () {
-		array<Character@> arr;
+	array<Entity@> getTeammates () {
+		array<Entity@> arr;
  		for (uint i = 0; i < this.arr[8].length(); i++) {
-			arr.insertLast(Character(this.arr[8][i]));
+			arr.insertLast(Entity(this.arr[8][i]));
 		}
 		return arr;
 	}
 	
-	array<Item@> getItems () {
-		array<Item@> arr;
+	array<Entity@> getItems () {
+		array<Entity@> arr;
  		for (uint i = 0; i < this.arr[9].length(); i++) {
-			arr.insertLast(Item(this.arr[9][i]));
+			arr.insertLast(Entity(this.arr[9][i]));
 		}
 		return arr;
 	}
 
-	Character@ getAI() {
-		return Character(self.num);
+	Entity@ getAI() {
+		return Entity(self.num);
 	}
 
-	Character@ getNearestEnemy () {
+	Entity@ getNearestEnemy () {
 		if (this.hasEnemy()) {
-			return Character(this.arr[ENEMY][0]);
+			return Entity(this.arr[ENEMY][0]);
 		}
 		return null;
 	}
 	
-	Character@ getNearestTeammate () {
+	Entity@ getNearestTeammate () {
 		if (this.hasTeammate()) {
-			return Character(this.arr[TEAMMATE][0]);
+			return Entity(this.arr[TEAMMATE][0]);
 		}
 		return null;
 	}
 
-	Attack@ getNearestAttack () {
+	Entity@ getNearestAttack () {
 		if (this.hasAttack()) {
-			return Attack(this.arr[ATTACK][0]);
+			return Entity(this.arr[ATTACK][0]);
 		}
 		return null;
 	}
@@ -206,37 +203,37 @@ class TargetLoader {
 		return null;
 	}
 
-	Item@ getNearestItem () {
+	Entity@ getNearestItem () {
 		if (this.hasItem()) {
-			return Item(this.arr[ITEM][0]);
+			return Entity(this.arr[ITEM][0]);
 		}
 		return null;
 	}
 
-	Item@ getNearestLightWeapon () {
+	Entity@ getNearestLightWeapon () {
 		if (this.hasLightWeapon()) {
-			return Item(this.arr[LIGHTWEAPON][0]);
+			return Entity(this.arr[LIGHTWEAPON][0]);
 		}
 		return null;
 	}
 
-	Item@ getNearestHeavyWeapon () {
+	Entity@ getNearestHeavyWeapon () {
 		if (this.hasHeavyWeapon()) {
-			return Item(this.arr[HEAVYWEAPON][0]);
+			return Entity(this.arr[HEAVYWEAPON][0]);
 		}
 		return null;
 	}
 
-	Item@ getNearestThrowWeapon () {
+	Entity@ getNearestThrowWeapon () {
 		if (this.hasThrowWeapon()) {
-			return Item(this.arr[THROWWEAPON][0]);
+			return Entity(this.arr[THROWWEAPON][0]);
 		}
 		return null;
 	}
 
-	Item@ getNearestDrink () {
+	Entity@ getNearestDrink () {
 		if (this.hasDrink()) {
-			return Item(this.arr[DRINK][0]);
+			return Entity(this.arr[DRINK][0]);
 		}
 		return null;
 	}

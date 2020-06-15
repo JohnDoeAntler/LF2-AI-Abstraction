@@ -1,13 +1,13 @@
-#include "Character.as";
+#include "Entity.as";
 #include "Position.as";
 #include "Boundary.as";
 
 class Movement {
 
-	private Character@ me;
+	private Entity@ me;
 
 	// dependency injection
-	Movement (Character@ me) {
+	Movement (Entity@ me) {
 		@this.me = me;
 	}
 
