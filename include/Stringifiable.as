@@ -4,7 +4,7 @@ interface IStringifiable {
 
 }
 
-mixin class Stringifiable {
+mixin class Stringifiable : Stringifiable {
 
 	string toString () {
 		return "";
