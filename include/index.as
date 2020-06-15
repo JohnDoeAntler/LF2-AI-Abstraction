@@ -10,5 +10,7 @@
 #include "PredictedRange.as"
 #include "Predictor.as"
 #include "Range.as"
+#include "StringBuilder.as"
+#include "Stringifiable.as"
 #include "TargetLoader.as"
 #include "Utils.as"
