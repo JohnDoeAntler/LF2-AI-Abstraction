@@ -1,4 +1,5 @@
 #include "Position.as";
+#include "Stringifiable.as";
 
 int getBoundaryWidth () {
 	return mode == 1 ? stage_bound : bg_width;
@@ -8,7 +9,7 @@ int getBoundaryZwidth () {
 	return bg_zwidth2 - bg_zwidth1;
 }
 
-class Boundary {
+class Boundary : IStringifiable {
 
 	private Position@ pivot;
 
