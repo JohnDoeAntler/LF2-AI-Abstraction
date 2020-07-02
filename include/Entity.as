@@ -4,15 +4,16 @@
 
 class Entity : Position {
 
-	protected int id;
-	protected int num;
-	protected bool facing;
-	protected int wait_counter;
-	protected int frame;
-	protected int state;
-	protected int type;
+	// basic entity info
+	private int id;
+	private int num;
+	private bool facing;
+	private int wait_counter;
+	private int frame;
+	private int state;
+	private int type;
 
-	/*Character*/
+	// character info
 	private int hp;
 	private int mp;
 	private int blink;
@@ -33,7 +34,7 @@ class Entity : Position {
 		this.state = info.state;
 		this.type = info.type;
 
-		/*Character*/
+		// character assignment
 		this.hp = info.hp;
 		this.mp = info.mp;
 		this.blink = info.blink;
@@ -94,7 +95,7 @@ class Entity : Position {
 		return (this.facing && this.isRightOf(obj)) || (!this.facing && this.isLeftOf(obj)) || (this.getX() - obj.getX() == 0);
 	}
 
-	/*Character*/
+	// character
 	int getHp() {
 		return this.hp;
 	}
@@ -147,15 +148,11 @@ class Entity : Position {
 	bool isSkilling()			{ return this.getFrame() > 234; }
 	bool isAttackable()			{ return !this.isLying() && this.blink == 0; }
 
-	/*Attack*/
-//	bool isAttacking() { return this.getState() == 3000 || this.getState() == 3005 || this.getState() == 3006; }
-
-	
-	//Source: Nucleargod's Woody AI
+	// attack
+	// Source: Nucleargod's Woody AI
 	bool isChee(){
 		return this.getType() == 3;
 	}
-	
 	
 	bool isBall(){
 		return this.getType() == 4;
@@ -228,7 +225,7 @@ class Entity : Position {
 		else return false;
 	}
 
-	/*Item*/
+	// item
 	bool isDropping()		{return this.getState() == 1000 || this.getState() == 2000;}
 	bool isOnHand()			{return this.getState() == 1001 || this.getState() == 2001;}
 	bool isBeingThrown()	{return this.getState() == 1002;}
