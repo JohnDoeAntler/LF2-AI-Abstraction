@@ -1,4 +1,4 @@
-#include "Distance.as"
+#include "Distance.as";
 #include "Stringifiable.as";
 
 class Position : IStringifiable {

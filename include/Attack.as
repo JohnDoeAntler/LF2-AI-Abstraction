@@ -106,4 +106,4 @@ class Attack : Entity {
 		else return false;
 	}
 
-};
+}

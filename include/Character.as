@@ -87,4 +87,4 @@ class Character : Entity {
 	bool isSkilling()			{ return this.getFrame() > 234; }
 	bool isAttackable()			{ return !this.isLying() && this.blink == 0; }
 
-};
+}

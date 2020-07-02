@@ -49,7 +49,7 @@ class Entity : Position {
 	Entity (const Info& info) {
 		super(num);
 		Entity::dependencyInjection(info);
-	};
+	}
 
 	Entity (int num) {
 		super(num);
@@ -234,5 +234,4 @@ class Entity : Position {
 	bool isBeingThrown()	{return this.getState() == 1002;}
 	bool isOnGround()		{return this.getState() == 1003 || this.getState() == 1004 || this.getState() == 2004;}
 
-
-};
+}

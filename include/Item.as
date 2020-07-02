@@ -16,4 +16,4 @@ class Item : Entity {
 	bool isOnGround()		{return this.getState() == 1003 || this.getState() == 1004 || this.getState() == 2004;}
 	bool isAttacking()		{return this.getState() == 2000 || this.isBeingThrown();}
 
-};
+}
