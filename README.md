@@ -24,7 +24,7 @@ Or you could just download the repository by clicking on the top right "clone" b
 ## Installing the custom ddraw.dll
 
 As LF2 AngelScript Engine 2.2 doesn't support array sorting and LF2 AngelScript Engine 2.3.1 has the wrong offset of the catch timer.
-Therefore, I self-compiled a custom ddraw.dll with supporting array sorting and correct ctimer offset. The download link is available in the [release page](https://github.com/JohnDoeAntler/LF2-AI-Abstraction/releases/tag/1.0.0).
+Therefore, I self-compiled a custom ddraw.dll with supporting array sorting and correct ctimer offset. The download link is available in the [release page](https://github.com/JohnDoeAntler/LF2-AI-Abstraction/releases/tag/0.0.1).
 
 # Examples
 
