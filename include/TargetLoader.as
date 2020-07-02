@@ -30,7 +30,7 @@ class TargetLoader {
 
 	// object list that exclude self
 	// the object list will be grouped by object type
-	private array<array<int>> arr(10, array<int>(0));
+	private array<array<int>>@ arr = array<array<int>>(10, array<int>(0));
 
 	void load () {
 		// loop 400 times to loop through all objects in game.
