@@ -21,10 +21,10 @@ void id () {
 	if (
 		me.distanceTo(enemy)
 			.predict(3) // predict the distance after 3 game tick
-			.inX(428) // the x-axis distance should be less than or equal to 428
-			.inY(80) // the y-axis distance should be less than or equal to 80
-			.inZ(45) // the z-axis distance should be less than or equal to 45
-			.outX(30) // the x-axis distance should be greater than 30
+			.inX(428) // the x-axis distance should be less than or equal to 428 px
+			.inY(80) // the y-axis distance should be less than or equal to 80 px
+			.inZ(45) // the z-axis distance should be less than or equal to 45 px
+			.outX(30) // the x-axis distance should be greater than 30 px
 			.inProjectileRange(
 				373,
 				45,
@@ -33,7 +33,9 @@ void id () {
 			) // check is in the tangent scope of henry arrow
 			.toBoolean() // stop method chaining, get the result of the calculation
 	) {
+		// if the AI is not facing to enemy
 		if (!me.isFacing(enemy)) {
+			// adjust the facing direction
 			movement.face(enemy);
 		} else {
 			A(); // happy spamming arrow ;D
