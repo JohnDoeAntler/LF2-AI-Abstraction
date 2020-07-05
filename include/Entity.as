@@ -48,7 +48,7 @@ class Entity : Position {
 	// One constructor cannot call another constructor.
 	// If you wish to share implementations in the constructors you should use a specific method for that.
 	Entity (const Info& info) {
-		super(num);
+		super(info);
 		Entity::dependencyInjection(info);
 	}
 
